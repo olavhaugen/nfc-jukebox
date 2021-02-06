@@ -1,0 +1,20 @@
+{
+  "name": "nfc-jukebox",
+  "version": "1.0.0",
+  "description": "Sonos NFC Jukebox",
+  "main": "index.js",
+  "dependencies": {
+    "@taptrack/ndef": "^1.0.3",
+    "nfc-pcsc": "^0.8.0",
+    "node-sonos": "^0.12.6",
+    "sonos": "^1.14.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "scripts": {
+    "start": "node ./src/index.js"
+  },
+  "author": "Olav Haugen",
+  "license": "ISC"
+}

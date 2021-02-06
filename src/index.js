@@ -8,12 +8,12 @@ let settingsData = fs.readFileSync('settings.json');
 let settings = JSON.parse(settingsData);
 
 console.log('Sonos NFC Jukebox!');
-console.log('Please touch NFC to start playing...');
 
 const sonos = new Sonos(settings.sonosHost);
 sonos.setSpotifyRegion(SpotifyRegion.EU);
 
 nfc.on('reader', (reader) => {
+  console.log('Reader connected! Please touch NFC to start playing...');
   reader.on('card', () => {
     reader
       .read(4, 128)
